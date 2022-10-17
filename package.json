@@ -26,7 +26,8 @@
     "build-ts": "tsc",
     "demo": "ts-node src/demo.ts",
     "make-libuiohook-patch": "git -C ./libuiohook diff --cached > ./src/libuiohook.patch",
-    "apply-libuiohook-patch": "git -C ./libuiohook apply ../src/libuiohook.patch"
+    "apply-libuiohook-patch": "git -C ./libuiohook apply ../src/libuiohook.patch",
+    "prepare": "npm run apply-libuiohook-patch && npm run build-ts"
   },
   "files": [
     "dist",
